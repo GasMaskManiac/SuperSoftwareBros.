@@ -107,6 +107,7 @@
       <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -118,7 +119,6 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -193,19 +193,19 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AllProducts.cs" />
+    <Compile Include="Models\TemporaryCuttersProductModel.cs" />
+    <Compile Include="Models\TemporaryDavisonProductModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TemporaryDealersProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\BazzarsBazaarSingleFile\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\BazzarsBazaar\Reference.cs">
+    <Compile Include="Service References\BazzasBazaar\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -246,17 +246,10 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <None Include="Service References\BazzarsBazaarSingleFile\Store.wsdl" />
-    <None Include="Service References\BazzarsBazaar\Store.disco" />
-    <None Include="Service References\BazzarsBazaar\configuration91.svcinfo" />
-    <None Include="Service References\BazzarsBazaar\configuration.svcinfo" />
-    <None Include="Service References\BazzarsBazaar\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\BazzarsBazaarSingleFile\configuration91.svcinfo" />
-    <None Include="Service References\BazzarsBazaarSingleFile\configuration.svcinfo" />
-    <None Include="Service References\BazzarsBazaarSingleFile\Reference.svcmap">
+    <None Include="Service References\BazzasBazaar\Store.disco" />
+    <None Include="Service References\BazzasBazaar\configuration91.svcinfo" />
+    <None Include="Service References\BazzasBazaar\configuration.svcinfo" />
+    <None Include="Service References\BazzasBazaar\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -296,19 +289,30 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\View.cshtml" />
     <Content Include="Views\Test\Products.cshtml" />
-    <None Include="Service References\BazzarsBazaar\Store.wsdl" />
-    <None Include="Service References\BazzarsBazaar\Store.xsd">
+    <None Include="Service References\BazzasBazaar\Store.wsdl" />
+    <None Include="Service References\BazzasBazaar\Store.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\BazzarsBazaar\Store1.xsd">
+    <None Include="Service References\BazzasBazaar\Store1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\BazzarsBazaar\Store2.xsd">
+    <None Include="Service References\BazzasBazaar\Store2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Service References\BazzasBazaar\Three_Amigos.BazzasBazaar.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BazzasBazaar\Three_Amigos.BazzasBazaar.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\BazzasBazaar\Three_Amigos.BazzasBazaar.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Views\Data\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Product\" />
     <Folder Include="Views\Test2\" />
   </ItemGroup>
   <ItemGroup>
@@ -319,8 +323,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\BazzarsBazaarSingleFile\" />
-    <WCFMetadataStorage Include="Service References\BazzarsBazaar\" />
+    <WCFMetadataStorage Include="Service References\BazzasBazaar\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
