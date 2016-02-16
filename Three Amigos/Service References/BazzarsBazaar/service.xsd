@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Three_Amigos.Contracts" />
+  <xs:element name="GetProductById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Three_Amigos.Contracts" minOccurs="0" name="GetProductByIdResult" nillable="true" type="q1:DTOProducts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategories">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Three_Amigos.Contracts" minOccurs="0" name="GetCategoriesResult" nillable="true" type="q2:ArrayOfDTOCategories" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Three_Amigos.Contracts" minOccurs="0" name="GetCategoriesByIdResult" nillable="true" type="q3:DTOCategories" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

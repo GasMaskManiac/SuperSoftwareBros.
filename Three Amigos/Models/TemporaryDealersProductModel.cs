@@ -13,6 +13,6 @@ namespace Three_Amigos.Models
         public virtual string Description { get; set; }
         public virtual double Price { get; set; }
         public virtual bool InStock { get; set; }
-        public virtual DateTime ExpectedRestock { get; set; }
+        public virtual DateTime? ExpectedRestock { get; set; }
     }
 }

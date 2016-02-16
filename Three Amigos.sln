@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BBBF56
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BazzarsBazaar", "BazzarsBazaar\BazzarsBazaar.csproj", "{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Three Amigos Windows Application\Three Amigos Windows Application.Shared\Three Amigos Windows Application.Shared.projitems*{3c309826-5a43-4a5e-bb07-b45517c8c2c5}*SharedItemsImports = 4
@@ -103,6 +105,16 @@ Global
 		{3C309826-5A43-4A5E-BB07-B45517C8C2C5}.Release|x86.ActiveCfg = Release|x86
 		{3C309826-5A43-4A5E-BB07-B45517C8C2C5}.Release|x86.Build.0 = Release|x86
 		{3C309826-5A43-4A5E-BB07-B45517C8C2C5}.Release|x86.Deploy.0 = Release|x86
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Release|x64.ActiveCfg = Release|Any CPU
+		{C1367687-EDF4-4EBD-92C4-5D3B4FE77BDD}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
