@@ -1,0 +1,1 @@
+C:\Users\n3014948\Desktop\AuthService\AuthService\AuthService\obj\Debug\Authentication MicroService.csprojResolveAssemblyReference.cache
