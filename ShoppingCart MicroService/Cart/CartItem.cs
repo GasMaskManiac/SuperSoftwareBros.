@@ -13,8 +13,6 @@
         public System.DateTime DateCreated { get; set; }
 
         public int ProductId { get; set; }
-
-        //Product type is needed here//
-        //public Product Product { get; set; }
+        public ProductModel Product { get; set; }
     }
 }

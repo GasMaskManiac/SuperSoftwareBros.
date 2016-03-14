@@ -9,34 +9,46 @@ namespace ShoppingCart_MicroService.Cart
 
         public const string CartSessionId = "CartId";
 
-        private List<CartItem> CartList = new List<CartItem>(); 
+        private List<CartItem> CartItem = new List<CartItem>(); 
 
         public void AddToCart(int id, int quantity)
         {
-            
-            // Add item to the cart collection
-            // Find item by Id in products collection
-            // Add quantity passed in to the collection also
-            // Add individual price, times price by quantity
-            // bulk discount
+            CartItem item = CartItem.FirstOrDefault(p => p.Product.AmigosProductID == id);
+
+            if (item == null)
+            {
+                CartItem.Add(new CartItem{ProductId = id, Quantity = quantity});
+            }
+            else
+            {
+                item.Quantity += quantity;
+            }
         }
 
-        public void RemoveItem(int id, int quantity)
+        public void RemoveItem(int id)
         {
             // Find item in the cart collection by id
             // Remove product from collection
-            // if no quantity is specified, remove 1
+
+            CartItem.RemoveAll(i => i.Product.AmigosProductID == id);
+        }
+
+        public void Clear()
+        {
+            // Remove all items from the cart collection
+            CartItem.Clear();
         }
 
         public IEnumerable<CartItem> Items
         {
-            get { return CartList; }
+            get { return CartItem; }
         }
 
-        public decimal TotalCost()
+        public double TotalCost()
         {
-            return 0;
             // Sum of product price * quantity
+            return CartItem.Sum(i => i.Product.ProductPrice*i.Quantity);
+            
         }
 
 
