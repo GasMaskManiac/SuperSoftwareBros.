@@ -19,7 +19,7 @@ namespace ThreeAmigosStoreServices
         {
             if (composite == null)
             {
-                throw new ArgumentNullException("composite");
+                throw new ArgumentNullException("composite"); //something
             }
             if (composite.BoolValue)
             {
