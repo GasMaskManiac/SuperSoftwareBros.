@@ -6,7 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace ConnectionService.Connections
+namespace ConnectionService.Connections2
 {
     public class _3AmigoService
     {

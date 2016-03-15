@@ -8,6 +8,8 @@ using System.Web.Mvc;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using ConnectionService.Connections;
+using ConnectionService;
 
 namespace Three_Amigos.Controllers
 {
@@ -152,6 +154,18 @@ namespace Three_Amigos.Controllers
         public ActionResult Edit(int id)
         {
             return View();
+        }
+
+        public void PushToDatabase()
+        {
+            ConnectionService.Connections._3AmigoService something = new _3AmigoService();
+            something._3AmigoPushProducts();
+
+            Debug.WriteLine("Yes");
+            //ConnectionService.Connections._3AmigoService;
+            //somehing.
+            //ConnectionService.Connections._3AmigoService() something = new _3AmigoService();
+            //something.
         }
     }
 }
